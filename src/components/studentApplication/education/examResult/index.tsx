@@ -239,7 +239,7 @@ export function ExamsResults() {
             </Section2>
             </Container>
             <div className="buttons">
-                 <Buttons path="/umat/student/education/documents"/>
+                 <Buttons path="/student/education/documents"/>
            </div>
         </Wrapper>
     )

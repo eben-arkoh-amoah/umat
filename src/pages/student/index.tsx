@@ -80,22 +80,22 @@ export function Student() {
         <Sidebar>
           <Rainbow></Rainbow>
           <Navbar>
-            <NavLinks to="/umat/student/general-info"
+            <NavLinks to="/student/general-info"
              className = {location.includes("/student/general-info") ? "side-bar-active" : ""}
             >General</NavLinks>
-            <NavLinks to="/umat/student/bio-info"
+            <NavLinks to="/student/bio-info"
                 className = {location.includes("/student/bio-info") ? "side-bar-active" : ""}
             >Bio data</NavLinks>
-            <NavLinks to="/umat/student/education"
+            <NavLinks to="/student/education"
                 className = {location.includes("/student/education") ? "side-bar-active" : ""}
             >Education</NavLinks>
             <NavLinks
-              to="/umat/student/programs"
+              to="/student/programs"
               className = {location.includes("/student/programs") ? "side-bar-active" : ""}
             >
               Programs
             </NavLinks>
-            <NavLinks to="/umat">Summary</NavLinks>
+            <NavLinks to="/student/programs">Summary</NavLinks>
           </Navbar>
         </Sidebar>
         <Section className={location.includes("/student/general-info") ? "min" : ""}>

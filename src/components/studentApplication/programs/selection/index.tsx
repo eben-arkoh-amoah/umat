@@ -103,7 +103,7 @@ export function ProgramsSelection() {
                 </div>
                </Preferences>
             </Section2>
-            <Buttons path="/umat"/>
+            <Buttons path="/"/>
         </Wrapper>
     )
 }

@@ -26,16 +26,15 @@ export function Routing() {
     return (
       <Router>
         <Routes>
-          <Route path="/" element={<Navigate to="/umat" />} />
-          <Route path="/umat" element={<LandingPage/>}>
+          <Route path="/" element={<LandingPage/>}>
             <Route path="" element={<Login/>} />
             <Route path="buy-pin" element={<BuyPin />} >
               <Route path="" element={<ProvidePersonalDetails />} />
               <Route path="payment" element={<Payment /> } />
               <Route path="successful" element={<Successful /> } />
             </Route>
-          </Route>  
-           <Route path="/umat/student" element={<Student />} >
+           </Route> 
+           <Route path="/student" element={<Student />} >
             <Route path="" element={<Navigate to="instructions" /> } />
             <Route path="instructions" element={<Instructions /> } />
             <Route path="general-info" element={<GeneralInfo />} />

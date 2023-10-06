@@ -34,15 +34,15 @@ export function Education() {
             <div className="wrapper">
                 <NavbarContainer>
                     <Link
-                        to={"/umat/student/education/instituitions"}
+                        to={"/student/education/instituitions"}
                         className={location.includes("/student/education/instituitions") ? "active" : ""}
                     >
                        Instituitions 
                     </Link>
-                    <Link to={"/umat/student/education/exams-results"}
+                    <Link to={"/student/education/exams-results"}
                        className={location.includes("/student/education/exams-results") ? "active" : ""}
                     >Exams Results</Link>
-                    <Link to={"/umat/student/education/documents"}
+                    <Link to={"/student/education/documents"}
                       className={location.includes("/student/education/documents") ? "active" : ""}
                     >Documents</Link>
             </NavbarContainer>
