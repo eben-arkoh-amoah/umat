@@ -10,7 +10,7 @@ flex-direction: column;
 align-items: center;
 justify-content: flex-start;
 padding: 15px 30px;
-min-height: 82.1vh;
+min-height: 83vh;
 `
 export const Landing = styled.div`
 display: flex;

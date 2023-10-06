@@ -38,8 +38,9 @@ export const LoginSection = styled.section`
 `;
 
 export const Line = styled.div`
-  width: 2000px;
+  width: 350vh;
   border-bottom: 2px solid #62F0E4;
+  margin-top: 50px;
   transform: rotate(120deg);
 `;
 

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import { Header } from "../../components/header";
 
 export const Main = styled.main`
   display: flex;
@@ -74,6 +75,7 @@ export function Student() {
 
   return (
     <Container>
+      <Header />
       <Main>
         <Sidebar>
           <Rainbow></Rainbow>
