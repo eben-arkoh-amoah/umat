@@ -1,0 +1,102 @@
+import React from "react";
+import styled from "styled-components";
+import { MapInputs } from "../../../../utils/functions/map";
+import { fieldset1 } from "../../../../utils/strings/biodata/personal";
+import { fieldset2 } from "../../../../utils/strings/biodata/personal";
+import { fieldset3 } from "../../../../utils/strings/biodata/personal";
+import { fieldset4 } from "../../../../utils/strings/biodata/personal";
+import { fieldset5 } from "../../../../utils/strings/biodata/personal";
+import upload from "../../../../images/upload.png";
+import { Buttons } from "../../navButtons";
+
+export const Container = styled.div`
+display: flex;
+flex-direction: column;
+gap: 70px;
+width: 100%;
+
+
+`
+
+export const Section = styled.div`
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+width: 100%;
+justify-self: center;
+gap: 10%;
+
+div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+
+  span{
+    margin-bottom: 20px;
+    color: #4D4D4D;
+    font-weight: 500;
+  }
+
+  .items{
+    display: flex;
+    direciton: column;
+    gap: 30px;
+  }
+}
+
+.image, .birthInfo{
+  padding-left: 5%;
+}
+`
+export const Image = styled.img`
+height: 100%;
+width: 90%;
+cursor: pointer;
+`
+
+export function PersonalBio() {
+    const fieldset1Content = {
+    content: fieldset1,
+  };
+    const fieldset2Content = {
+    content: fieldset2,
+  };
+    const fieldset3Content = {
+    content: fieldset3,
+  };
+    const fieldset4Content = {
+    content: fieldset4,
+  };
+    const fieldset5Content = {
+    content: fieldset5,
+  };
+    return (
+      <Container>
+        <Section>
+          <div className="image">
+            <Image src={upload } alt={upload} />
+            </div>
+          <div className="name items">{MapInputs(fieldset1Content)}</div>
+          <div className="items">{MapInputs(fieldset2Content)}</div>
+        </Section>  
+        <Section>
+          <div className="birthInfo">
+            <span><b>Birth Details</b></span>
+           <div className="items">{MapInputs(fieldset3Content)}</div>
+          </div>
+          <div>
+            <span><b>National Identity</b></span>
+           <div className="items">{MapInputs(fieldset4Content)}</div>
+          </div>
+          <div>
+            <span><b>Birth Details</b></span>
+           <div className="items">{MapInputs(fieldset5Content)}</div>
+          </div>
+        </Section>
+          <div>
+            <Buttons path="/umat/student/bio-info/family-details"/>
+          </div>
+      </Container>
+    )
+}

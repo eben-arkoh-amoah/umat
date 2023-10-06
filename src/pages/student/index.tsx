@@ -1,0 +1,105 @@
+import React from "react";
+import styled from "styled-components";
+import { Link, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+
+export const Main = styled.main`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 60px 70px 10px;
+  min-height: 82.1vh;
+  gap: 50px;
+`;
+
+export const Sidebar = styled.section`
+  width: 15%;
+  box-shadow: 10px -7px 4px #03453FC0;
+  border: 1px solid #03453F;
+  border-radius: 10px;
+  height: 72vh;
+  background-color: white;
+`;
+
+export const Navbar = styled.nav`
+  height: 40vh;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px  45px;
+`;
+
+export const Rainbow = styled.div`
+  background-image: linear-gradient(to bottom right, #2D0BFF, #F4C51A, #7CAE50, #009688);
+  height: 15vh;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+`;
+
+export const NavLinks = styled(Link)`
+  color: #144620;
+  text-decoration: none;
+  mrgin-top: -10px;
+`;
+
+export const Container = styled.div`
+width: 100%;
+
+.min{
+  width: 50%;
+}
+`
+
+export const Section = styled.section`
+  background-color: white;
+  padding:  20px;
+  border-radius: 10px;
+  box-shadow: 10px -7px 4px #03453FC0;
+  border: 1px solid #03453F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
+
+export function Student() {
+ 
+  const location = useLocation().pathname;
+
+  return (
+    <Container>
+      <Main>
+        <Sidebar>
+          <Rainbow></Rainbow>
+          <Navbar>
+            <NavLinks to="/umat/student/general-info"
+             className = {location.includes("/student/general-info") ? "side-bar-active" : ""}
+            >General</NavLinks>
+            <NavLinks to="/umat/student/bio-info"
+                className = {location.includes("/student/bio-info") ? "side-bar-active" : ""}
+            >Bio data</NavLinks>
+            <NavLinks to="/umat/student/education"
+                className = {location.includes("/student/education") ? "side-bar-active" : ""}
+            >Education</NavLinks>
+            <NavLinks
+              to="/umat/student/programs"
+              className = {location.includes("/student/programs") ? "side-bar-active" : ""}
+            >
+              Programs
+            </NavLinks>
+            <NavLinks to="/umat">Summary</NavLinks>
+          </Navbar>
+        </Sidebar>
+        <Section className={location.includes("/student/general-info") ? "min" : ""}>
+              <Outlet />    
+        </Section>
+      </Main>
+    </Container>
+  );
+}
