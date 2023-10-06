@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const Container = styled.main`
   display: flex;
@@ -7,6 +7,15 @@ export const Container = styled.main`
   align-items: center;
   justify-content: space-between;
   color: #62F0E4;
+
+
+  @media(max-width: 600px){
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  background: blue;
+
+  }
 `;
 
 export const Section1 = styled.section`
@@ -17,6 +26,7 @@ export const Section1 = styled.section`
   align-self: flex-start;
   padding-top: 30px;
   line-height: 30px;
+
 `;
 
 export const Hero = styled.h1`
@@ -42,6 +52,11 @@ export const Line = styled.div`
   border-bottom: 2px solid #62F0E4;
   margin-top: 50px;
   transform: rotate(120deg);
+
+  @media(max-width: 700px){
+    display: none;
+
+  }
 `;
 
 export const LoginImage = styled.img`

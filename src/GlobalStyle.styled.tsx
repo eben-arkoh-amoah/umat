@@ -27,4 +27,13 @@ export default createGlobalStyle`
 select{
   cursor: pointer;
 }
+
+a:hover, button:hover{
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+a:active, button:active{
+   color: #F4C51A;
+}
   `

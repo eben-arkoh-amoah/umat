@@ -18,15 +18,27 @@ export const About = styled.div`
      width: 92%;
      gap: 50%;
      align-self: center;
+     justify-content: space-between;
+
+     @media (max-width: 600px){
+          width: 100%;
+          gap: 5%;
+     }
 `
 export const Contact = styled.div`
  display: flex;
      flex-direction: row;
      width: 100%;
      gap: 40%;
+
+     @media (max-width: 600px){
+          gap: 10%;
+          font-size: 20px;
+          color: green;
+          }
 `
 export const IconContainer = styled.div`
-     width: 25px;
+     width: 2%;
      background-color: voilet;
 `
 export const Section = styled.div`
@@ -36,6 +48,13 @@ flex-direction: row;
 align-items: center;
 gap: 20px; 
 color: white;
+
+button{
+     width: 25px;
+     background-color: voilet;
+}
+
+}
 `
 
 export const Select = styled.select`
@@ -48,6 +67,10 @@ align-self: flex-end;
 `
 export const Text = styled.p`
 font-size: 12px;
+
+@media (max-width:  600px){
+    font-size: 14px;
+}
 `
 
 export const Language = styled.div`
@@ -101,6 +124,31 @@ export const Nav = styled.ul`
 
     }
    }
+
+   @media (max-width: 700px){
+        position: absolute;
+        flex-direction: column;
+        padding-left: 20px;
+        padding: 10px;
+        gap: 30px;
+        width: 27%;
+        left: 60%;
+        top: 13vh;
+        background: #03453F;
+        border: 1px solid white;
+
+        .link{
+
+          width: 100%;
+          margin: auto;
+             a{
+               width: 500%;
+               font-size: 17px;
+             }
+        }
+
+}
+
 
 
 `

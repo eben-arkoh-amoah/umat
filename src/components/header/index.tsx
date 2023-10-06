@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AiFillPhone, AiFillMail } from "react-icons/ai";
+import {FaAlignJustify} from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 import * as Styles from "./styled";
 import brand from "../../images/brand.png";
@@ -45,6 +46,13 @@ export function ApplicationLinks() {
 export function Header() {
     const location = useLocation().pathname;
 
+    const [showModal, setShowModal] = useState(false);
+
+    const dropModal = () =>{
+
+        setShowModal(!showModal);
+    }
+
     return (
         <Styles.Heading>
             <Styles.About>
@@ -77,13 +85,18 @@ export function Header() {
                         and technology
                     </Styles.BrandText>
                 </Styles.Section>
-                <nav>
+            
+             { showModal  &&  <nav className="Modal">
                     {
                     location.includes("student") ? <ApplicationLinks /> :
                     <LandingLinks />
                     
-             }
-                </nav>
+                    }
+                </nav> 
+}
+{
+                  <Styles.IconContainer className="menuContainer"><FaAlignJustify className="menu" color="#62F0E4" size={0} onClick={dropModal}/></Styles.IconContainer>
+            }
             </Styles.Brand>
         </Styles.Heading>
     )
