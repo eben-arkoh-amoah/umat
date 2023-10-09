@@ -1,5 +1,6 @@
+import { Item } from "../../functions/map"
 
-export const fieldset1=[
+export const fieldset1: Item[] =[
     {
         label: "first name",
         value: "",
@@ -30,7 +31,7 @@ export const fieldset1=[
     },  
 ]
 
-export const fieldset2 = [
+export const fieldset2: Item[] = [
     {
     value: "Female",
     id: "01",
@@ -74,7 +75,7 @@ export const fieldset2 = [
   },
 ]
 
-export const fieldset3 = [
+export const fieldset3 :Item[] = [
    {
         label: "Date of Birth",
         value: "",
@@ -140,7 +141,7 @@ export const fieldset3 = [
     },
 ]
 
-export const fieldset4 = [
+export const fieldset4 :Item[] = [
     {
         label: "Email",
         value: "",
@@ -158,7 +159,7 @@ export const fieldset4 = [
         fieldType: "input",
         id: "02",
         width: "100%",
-        src: require("../../../images/ghanaFlag.png")
+        flag: require("../../../images/ghanaFlag.png")
         
     },
     {
@@ -190,7 +191,7 @@ export const fieldset4 = [
     },
 ]
 
-export const fieldset5 = [
+export const fieldset5 :Item[] = [
      {
     value: "Ghanaian",
     id: "01",

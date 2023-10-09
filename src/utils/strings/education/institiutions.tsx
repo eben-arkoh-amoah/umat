@@ -1,4 +1,6 @@
-export const fieldset1 = [
+import { Item } from "../../functions/map"
+
+export const fieldset1 :Item[] = [
     {
         fieldType: "radio",
         label: "Nationality",
@@ -22,7 +24,7 @@ export const fieldset1 = [
     },
 ];
 
-export const fieldset2 = [
+export const fieldset2  :Item[] = [
        {
     value: "",
     id: "01",
@@ -79,7 +81,7 @@ export const fieldset2 = [
   },
 ]
 
-export const fieldset3 = [
+export const fieldset3 :Item[] = [
     {
         label: "Institution",
         value: "",
@@ -91,7 +93,7 @@ export const fieldset3 = [
     },
 ]
 
-export const fieldset4 = [
+export const fieldset4 :Item[] = [
        {
     value: "",
     id: "01",

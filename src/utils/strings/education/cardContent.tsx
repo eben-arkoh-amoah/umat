@@ -1,43 +1,42 @@
-export const institutions = [
-    {
-        flag: require("../../../images/ghanaFlag.png"),
-        alt: "ghana",
-        text1: "All Nations Univerity COllege",
-        status: "completed",
-        id: "01",
+import { Item } from "../../functions/map";
 
-    },
-    {
-        flag: require("../../../images/ukFlag.png"),
-        alt: "ghana",
-        text1: "My Home International",
-        status: "completed",
-        id: "03",
+export const institutions: Item[] = [
+  {
+    flag: require("../../../images/ghanaFlag.png"),
+    alt: "ghana",
+    text1: "All Nations University College",
+    id: "01",
+    fieldType: "input",
+    label: "Full name",
+    width: "100%",
+  },
+  {
+    alt: "ghana",
+    text1: "My Home International",
+    id: "03",
+    fieldType: "input",
+    label: "Phone Number",
+    width: "100%",
+  },
+  // Add more items as needed
+];
 
-    },
-    {
-        flag: require("../../../images/ghanaFlag.png"),
-        alt: "ghana",
-        text1: "All nations Univerity COllege",
-        status: "completed",
-        id: "01",
-
-    }
-]
-export const examsInstances = [
-     {
-        alt: "",
-        text1: "2021 - NOV / DEC",
-        id: "01",
-        display: "none",
-
-    },
-     {
-        alt: "",
-        text1: "2020 - MAY / JUNE",
-         id: "02",
-        display: "none",
-        
-
-    }
-]
+export const examsInstances: Item[] = [
+  {
+    alt: "",
+    text1: "2021 - NOV / DEC",
+    id: "01",
+    fieldType: "input",
+    label: "Exam Instance",
+    width: "100%",
+  },
+  {
+    alt: "",
+    text1: "2020 - MAY / JUNE",
+    id: "02",
+    fieldType: "input",
+    label: "Exam Instance",
+    width: "100%",
+  },
+  // Add more items as needed
+];

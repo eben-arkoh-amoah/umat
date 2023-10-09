@@ -235,7 +235,7 @@ export function ExamsResults() {
                 </Section>
            </Section>
                 <Section2>
-                    <Card items={examsInstances} heading="WASCE exams instances"/>
+                    <Card content={examsInstances} heading="WASCE exams instances" />
             </Section2>
             </Container>
             <div className="buttons">

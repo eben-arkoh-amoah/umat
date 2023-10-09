@@ -12,23 +12,18 @@ import Delete from "../../../../images/Delete.png";
 import { Buttons } from "../../navButtons";
 import {institutions} from "../../../../utils/strings/education/cardContent";
 
-
 export interface Background {
-    text1: string;
-    flag?: string;
-    status?: string;
-    alt?: string;
-    id: string;
-    display?: string;
+  text1?: string;
+  flag?: string;
+  status?: string;
+  alt?: string;
+  id: string;
+  display?: string;
 }
 
 export interface BackgroundContent {
-    heading: string;
-    content: Background[];
-}
-export interface CardContent {
-    items: Background[];
-    heading: string;
+  heading: string;
+  content: Background[];
 }
 
 
@@ -54,31 +49,29 @@ p{
    }
 `
 
-export function Record({content, heading}: BackgroundContent) {    
-    return (
-        <Records>
-            <h3>{heading}</h3>
-        {
-               content.map((item)=> <RecordsContainer id={item.id}>
-            <img src={item.flag} alt={item.alt} style={{display: item.display}}/>
-            <p className="school">{item.text1}</p>
-            <p>{item.status}</p>
-            <img src={edit}  alt={"edit"} />
-            <img src={Delete}  alt={"delete"} />
-        </RecordsContainer>)
-        }
-        </Records>
-    )
+export function Record({ content, heading }: BackgroundContent) {
+  return (
+    <Records>
+      <h3>{heading}</h3>
+      {content.map((item) => (
+        <RecordsContainer id={item.id}>
+          {item.flag && <img src={item.flag} alt={item.alt} style={{ display: item.display }} />}
+          <p className="school">{item.text1}</p>
+          {item.status && <p>{item.status}</p>}
+          <img src={edit} alt={"edit"} />
+          <img src={Delete} alt={"delete"} />
+        </RecordsContainer>
+      ))}
+    </Records>
+  );
 }
-
-export function Card({items, heading}: CardContent) {
-    return (
-        <RecordsContaner>
-            <Record content={items} heading={heading } />
-            </RecordsContaner>
-    )
+export function Card({ content, heading }: BackgroundContent) {
+  return (
+    <RecordsContaner>
+      <Record content={content} heading={heading} />
+    </RecordsContaner>
+  );
 }
-
 export const Container = styled.div`
 width: 100%;
 display: flex;
@@ -218,9 +211,9 @@ export function Institutions() {
                 </Section>
                 </Inputs>
             </InputsWrapper>
-            <Card items={institutions} heading="Education Records"/>
-            </Wrapper>
-            <Buttons path="/student/education/exams-results"/>
+            <Card content={institutions} heading="Education Records" />
+          <Buttons path="/student/education/exams-results" />
+          </Wrapper>
         </Container>
     )
 }

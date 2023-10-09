@@ -1,4 +1,6 @@
-export const fieldset1 = [
+import { Item } from "../../functions/map";
+
+export const fieldset1 :Item[] = [
     {
         fieldType: "radio",
         label: "Are you visually impaired",
@@ -73,7 +75,7 @@ export const fieldset1 = [
     },
 ];
 
-export const fieldset2 = [
+export const fieldset2 :Item[] = [
     {
         fieldType: "radio",
         label: "Have you taken COVID -19 vaccine?",
@@ -168,7 +170,7 @@ export const fieldset2 = [
         width: "100%",
     },
 ];
-export const fieldset3 = [
+export const fieldset3 :Item[] = [
     {
         fieldType: "radio",
         label: "Have you ever been convicted of a crime?",
