@@ -11,7 +11,7 @@ export function BuyPin() {
   return (
     <Styles.Container>
       {
-        location.includes("payment") ? <h1>GET YOUR ADMISSION PIN</h1> : <h1>PIN SUCCESSFUL</h1>
+     location.includes("payment") || location.includes("personal-info") ? <h1>GET YOUR ADMISSION PIN</h1> : <h1>PIN SUCCESSFUL</h1>
       }
      { <Styles.SectionContainerCard>
         <Styles.BigCard className={location.includes("/buy-pin/successful") ? "max" : ""}>

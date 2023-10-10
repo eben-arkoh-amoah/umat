@@ -17,6 +17,14 @@ div{
         height: 200px;
     }
 }
+
+@media(max-width: 600px){
+    flex-direction: column-reverse;
+
+    img{
+        margin-top: -180px;
+    }
+}
 `
 
 export const Credentials = styled.div`
@@ -53,6 +61,10 @@ flex-direction: column;
 a{
     color: #009688;
     font-weight: bold;
+}
+
+@media (max-width: 600px){
+    width: 100%;
 }
 `
 
