@@ -19,7 +19,7 @@ color: #03453F;
 p{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 
   span:nth-child(2){
     font-size: 13px;

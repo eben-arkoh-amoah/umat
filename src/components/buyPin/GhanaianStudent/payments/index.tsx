@@ -16,6 +16,7 @@ display: flex;
 flex-direction: column;
 gap: 20px;
 width: 100%;
+max-width: 350px;
 margin-bottom: 20px;
 
 @media (min-width: 601px){
@@ -46,7 +47,9 @@ export function Payment() {
   return (
     <Styles.Container>
       <Styles.Form>
-        <PaymentOptions onPaymentMethodChange={handlePaymentMethodChange} />
+        <div className="options">
+           <PaymentOptions onPaymentMethodChange={handlePaymentMethodChange} />
+       </div>
       </Styles.Form>
       <Styles.OptionsContainer>
         <p>we only accept</p>

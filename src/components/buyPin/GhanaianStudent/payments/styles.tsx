@@ -16,7 +16,6 @@ export const Options = styled.img`
 `;
 
 export const Form = styled.form`
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,36 +23,59 @@ export const Form = styled.form`
   margin: auto;
   gap: 20px;
 
+  .options{
+    display: flex;
+
+    fieldset{
+      max-width: 100%;
+
+      input{
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 400px){
+      width: 100%;
+      font-size: 12px;
+      justify-content: flex-start;
+
+      fieldset{
+        width: 100%;
+        margin-left: -30px;
+        gap: 5%;
+        label{
+          width: 100%;
+        }
+
+        input{
+
+        }
+      }
+    }
+  }
 
   .payment{
     @media (max-width: 600px){
-      width: 131.5%;
+      width: 100%;
       justify-content: flex-start;
       display: flex;
       flex-direction: row;
       margin-bottom: 20px;
     
     .option{
-      width: 150%;
+      width: 100%;
       padding-left: 10px;
     }
 
     }
-
-  fieldset {
-    display: flex;
-    font-size: 15px;
-  }
-
     label {
-      width: 150%;
+      width: 100%;
     }
 
     .option{
       color: #03453F;
       font-weight: bold;
       font-size: 14px;
-      margin-right: 70px;
     }
 
     }
@@ -128,11 +150,9 @@ export const SelectNationality = styled.div`
   }
 
 @media (max-width: 600px){
-  margin-left: -10px;
   align-items: center;
 
   label{
-  width: 500%;
   font-size: 12px;
   }
 
@@ -145,13 +165,14 @@ input{
 export const OptionsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   gap: 15px;
   text-align: center;
   align-self: flex-start;
   padding-bottom: 20px;
+  
   
 `;
 

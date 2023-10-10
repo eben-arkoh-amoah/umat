@@ -13,8 +13,6 @@ function Visa() {
     <fieldset className="fieldset2 space">
       <legend>Payment Details</legend>
       <Styles.VisaLogo src={visalogo} alt="" />
-      {/* <input type="text" placeholder="CARD NUMBER" />
-      <input type="text" placeholder="CARD HOLDER NAME" /> */}
       <div className="inputs">
         {MapInputs(details)}
        </div>
