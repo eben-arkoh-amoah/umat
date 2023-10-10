@@ -69,23 +69,23 @@ export const Form = styled.form`
 }
 
   .fieldset2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: -20px;
+   
+   .inputs{
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: flex-start;
+   margin-bottom: -50px;
+   }
 
     legend {
-      padding-bottom: 40px;
+      padding-bottom: 20px;
     }
-
-    input {
-      border: 1px solid #d0d7de;
-      background-color: #f6f8fa;
-      border-radius: 5px;
-      padding: 8px;
-      width: 90%;
-    }
-
     div {
       display: flex;
       flex-direction: row;
@@ -95,12 +95,17 @@ export const Form = styled.form`
 
       .inp1 {
         width: 15%;
+        padding: 5px;
       }
       .inp2 {
         width: 25%;
+        padding: 5px;
+
       }
       .inp3 {
         width: 30%;
+        padding: 5px;
+
       }
     }
   }

@@ -1,14 +1,23 @@
 import React from 'react';
 import * as Styles from './styles';
 import visalogo from '../../../../images/visalogo.png';
+import { MapInputs } from '../../../../utils/functions/map';
+import { fieldset1 } from '../../../../utils/strings/login/creditCard';
 
 function Visa() {
+  const details = {
+     content: fieldset1
+   }
+
   return (
     <fieldset className="fieldset2 space">
       <legend>Payment Details</legend>
-      <input type="text" placeholder="CARD NUMBER" />
       <Styles.VisaLogo src={visalogo} alt="" />
-      <input type="text" placeholder="CARD HOLDER NAME" />
+      {/* <input type="text" placeholder="CARD NUMBER" />
+      <input type="text" placeholder="CARD HOLDER NAME" /> */}
+      <div className="inputs">
+        {MapInputs(details)}
+       </div>
       <Styles.VisaInputs>
         <input type="text" placeholder="12" className="inp1" />
         <input type="text" placeholder="23" className="inp2" />

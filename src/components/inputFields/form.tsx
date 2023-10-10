@@ -7,12 +7,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 300px;
     margin: 0 auto;
+    width:100%;
      
    div{
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     gap: 10px !important;
    }
 
