@@ -9,12 +9,15 @@
     gap: 20px;
     max-width: 300px;
     margin: 0 auto;
-
      
    div{
     display: flex;
     flex-direction: column;
     gap: 10px !important;
+   }
+
+   .tel{
+    flex-direction: column;
    }
   `;
 
@@ -47,7 +50,6 @@ export const Tel = styled.div`
   display: flex;
   flex-direction: row !important;
   with: 100%;
-
       img {
         height: 25px;
         width: 35px;
@@ -120,7 +122,7 @@ export const Tel = styled.div`
                 {touched.emailInput && <ErrorMessageStyled name="emailInput" component="div" />}
               </div>
             ) : (
-              <div>
+              <div className='tel'>
                 <Label htmlFor={id}>{label}</Label>
                 <Tel className={src ? 'iconified' : ''}>
                   {src && <img src={src} alt={label} />}

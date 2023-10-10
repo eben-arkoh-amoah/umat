@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 export const SelectContainer = styled.div`
     display: flex;
-flex-direction: column;
+flex-direction: column !important;;
 gap: 10px;
 
 label{

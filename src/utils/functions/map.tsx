@@ -2,7 +2,7 @@ import {Select, SelectParamaters } from "../../components/inputFields/input";
 import { OptionContent } from "../../components/inputFields/input";
 import { Radio } from "../../components/inputFields/input";
 import { SingleRadio } from "../../components/inputFields/input";
-import Input from "../../pages/form";
+import Input from "../../components/inputFields/form";
 
 export interface Item{
     id: string;

@@ -19,11 +19,12 @@ export const Container = styled.main`
     width: 35%;
 
     @media (max-width: 600px){
-      width: 75%;
+      width: 140%;
       font-size: 20px;
-      margin: 30px 0;
+      margin: 30px 0 0;
       display: flex;
         justify-self: center;
+        justify-content: center;
     }
   }
 `;
@@ -45,7 +46,9 @@ export const SectionContainerCard = styled.div`
     font-size: 15px;
   }
  @media (max-width : 600px){
-  display: none;
+  width: 145%;
+  background: inherit;
+  box-shadow: none;
  }
 
 `;
@@ -59,6 +62,12 @@ export const BigCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+   @media (max-width : 600px){
+   width: 100%;
+   background: inherit;
+   box-shadow: none;
+ }
 `;
 
 export const SmallCard = styled.div`
@@ -70,6 +79,10 @@ export const SmallCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 600px){
+   display: none;
+  }
 `;
 
 export const Amount = styled.h2`

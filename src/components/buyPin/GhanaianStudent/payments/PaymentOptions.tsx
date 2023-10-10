@@ -13,7 +13,7 @@ function PaymentOptions({ onPaymentMethodChange }: PaymentOptionsProps) {
   };
 
   return (
-    <fieldset>
+    <fieldset   className='payment'>
       <div className='option'>Payment Options</div>
       <Styles.SelectNationality>
         <input

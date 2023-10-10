@@ -29,7 +29,8 @@ export function Routing() {
           <Route path="/" element={<LandingPage/>}>
             <Route path="/" element={<Login/>} />
             <Route path="buy-pin" element={<BuyPin />} >
-              <Route path="" element={<ProvidePersonalDetails />} />
+              <Route path="" element={<Navigate to="personal-info"/>} />
+              <Route path="personal-info" element={ <ProvidePersonalDetails />} />
               <Route path="payment" element={<Payment /> } />
               <Route path="successful" element={<Successful /> } />
             </Route>

@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   margin: auto;
   gap: 20px;
+
 `;
 
 export const Options = styled.img`
@@ -23,9 +24,26 @@ export const Form = styled.form`
   margin: auto;
   gap: 20px;
 
+
+  .payment{
+    @media (max-width: 600px){
+      width: 131.5%;
+      justify-content: flex-start;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+    
+    .option{
+      width: 150%;
+      padding-left: 10px;
+    }
+
+    }
+
   fieldset {
     display: flex;
     font-size: 15px;
+  }
 
     label {
       width: 150%;
@@ -36,6 +54,8 @@ export const Form = styled.form`
       font-weight: bold;
       font-size: 14px;
       margin-right: 70px;
+    }
+
     }
   }
 
@@ -91,7 +111,7 @@ export const SelectNationality = styled.div`
   flex-direction: row;
   gap: 5px;
   color: #0a7c72;
-
+  
   label{
     color: #0A7C72;
     font-weight: bold;
@@ -100,8 +120,21 @@ export const SelectNationality = styled.div`
 
   input{
     width: 30px;
-    margin-right: 7px;
   }
+
+@media (max-width: 600px){
+  margin-left: -10px;
+  align-items: center;
+
+  label{
+  width: 500%;
+  font-size: 12px;
+  }
+
+input{
+ height: 17px;
+}
+}
 `;
 
 export const OptionsContainer = styled.div`
@@ -114,6 +147,7 @@ export const OptionsContainer = styled.div`
   text-align: center;
   align-self: flex-start;
   padding-bottom: 20px;
+  
 `;
 
 export const VisaLogo = styled.img`
@@ -150,5 +184,24 @@ select{
 label{
   color: #03453F;
   font-size: 14px;
+  width: 100%;
 }
+
+@media (max-width: 600px){
+.inputs{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: -80px;
+
+  input{
+    width: 100%;
+  }
+
+  select{
+    width: 100%;
+  }
+}
+}
+
 `

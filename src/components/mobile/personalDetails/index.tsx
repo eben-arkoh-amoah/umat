@@ -25,7 +25,7 @@ gap: 30px;
     }
 }
 
-form{
+.form{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ img{
 
 export function MobilePersonalInfo() {
     const navigate = useNavigate();
-
+    console.log("hello world");
     const personalInfo = {
         content: personal
     };
@@ -79,14 +79,14 @@ export function MobilePersonalInfo() {
                 <p><span><b>COST :  120 GHS</b></span></p>
                 <img src={money} alt="money" />
             </Pricing>
-            <form>
+            <div className="form">
                 {
                     MapInputs(personalInfo)
                 }
                 <div className="button">
-                     <Button text="Confirm payment" background="#009688" color="white" width={200} weight="bold" onClick={() => {navigate("/buy-pin/successful")}} />
+                     <Button text="Check out" background="#009688" color="white" width={200} weight="bold" onClick={() => {navigate("/buy-pin/payment")}} />
                 </div>
-            </form>
+            </div>
 
         </Wrapper>
     )

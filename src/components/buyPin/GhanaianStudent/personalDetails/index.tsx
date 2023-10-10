@@ -1,12 +1,15 @@
 import React from 'react';
 import * as Styles from "./styles";
 import SelectNationality from '../../../Selectnationality';
+import { MobilePersonalInfo } from '../../../mobile/personalDetails';
 
 export function ProvidePersonalDetails() {
+  const device = window.innerWidth;
+
   return (
     <React.Fragment>
       {
-        <Styles.Form>
+        device <  600  ? <MobilePersonalInfo/> : <Styles.Form>
       <SelectNationality />
       <fieldset className="fieldset2">
         <Styles.InputConatainer>

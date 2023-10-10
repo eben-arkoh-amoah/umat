@@ -5,6 +5,7 @@ import visalogo from '../../../../images/visalogo.png';
 function Visa() {
   return (
     <fieldset className="fieldset2 space">
+      <legend>Payment Details</legend>
       <input type="text" placeholder="CARD NUMBER" />
       <Styles.VisaLogo src={visalogo} alt="" />
       <input type="text" placeholder="CARD HOLDER NAME" />

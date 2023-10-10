@@ -14,7 +14,7 @@ export const personal: Item[] = [
         label: "Email",
         value: "",
         placeholder: "example@email.com",
-        inputType: "text",
+        inputType: "email",
         fieldType: "input",
         id: "02",
         width: "100%",

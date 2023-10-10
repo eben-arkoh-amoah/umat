@@ -7,6 +7,31 @@ import { Button } from '../../../button';
 import PaymentOptions from './PaymentOptions';
 import Visa from './VisaPayment';
 import Momo from "./Momo";
+import styled from "styled-components";
+
+import { Step2 } from '../processInfo.tsx';
+
+export const DetailsWrapper = styled.div`
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 100%;
+margin-bottom: 20px;
+
+@media (min-width: 601px){
+display: none;
+}
+`
+
+export function Details() {
+  
+  return(
+    <DetailsWrapper>
+      <Step2 />
+     </DetailsWrapper>
+  )
+}
+
 
 type PaymentMethod = 'credit-card' | 'mobile-money';
 
@@ -30,6 +55,7 @@ export function Payment() {
           alt="momo options"
         />
       </Styles.OptionsContainer>
+      <Details />
       <Styles.Form>
         {paymentMethod === 'credit-card' ? <Visa /> : <Momo />}
         <div className="buttonContainer">
