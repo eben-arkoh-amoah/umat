@@ -25,13 +25,13 @@ export const personal: Item[] = [
         inputType: "tel",
         fieldType: "input",
         id: "03",
-        width: "100%",
+        width: "110%",
     },{
     value: "",
     id: "04",
        fieldType: "select",
         label: "Level",
-        width: "80%",
+        width: "82%",
     options: [{
       value: "HND",
       content: "HND",

@@ -8,7 +8,8 @@
     flex-direction: column;
     gap: 20px;
     margin: 0 auto;
-    width:100%;
+    align-items: center;
+    width: 90%;
      
    div{
     display: flex;

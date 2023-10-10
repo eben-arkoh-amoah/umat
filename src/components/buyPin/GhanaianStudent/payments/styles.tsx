@@ -161,6 +161,11 @@ export const VisaLogo = styled.img`
   width: 30px;
   top: 395px;
   left: 680px;
+
+  @media (max-width: 600px){
+    left: 72.3%;
+    top: 67.05vh;
+  }
 `;
 
 export const VisaInputs = styled.div`

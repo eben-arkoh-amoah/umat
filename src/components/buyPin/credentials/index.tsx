@@ -65,6 +65,10 @@ a{
 
 @media (max-width: 600px){
     width: 100%;
+
+    img{
+        margin-top:  50px;
+    }
 }
 `
 
