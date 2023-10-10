@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 
 export const Container = styled.main`
   display: flex;
-  width: 92%;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -13,8 +13,6 @@ export const Container = styled.main`
     flex-direction: column;
     justify-content: space-between;
     gap: 40px;
-  background: blue;
-
   }
 `;
 
@@ -45,6 +43,10 @@ export const LoginSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width : 600px){
+    display: none;
+  }
 `;
 
 export const Line = styled.div`

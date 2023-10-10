@@ -4,7 +4,9 @@ import SelectNationality from '../../../Selectnationality';
 
 export function ProvidePersonalDetails() {
   return (
-    <Styles.Form>
+    <React.Fragment>
+      {
+        <Styles.Form>
       <SelectNationality />
       <fieldset className="fieldset2">
         <Styles.InputConatainer>
@@ -25,6 +27,8 @@ export function ProvidePersonalDetails() {
           </select>
         </Styles.InputConatainer>
       </fieldset>
-    </Styles.Form>
+        </Styles.Form>
+      }
+    </React.Fragment>
   );
 }

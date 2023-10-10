@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../button";
 import * as styles from "./styles"; 
 import loginbg from "../../images/loginbg.jpg"; 
+import { MobileLogin } from "../mobile/login";
 
 export function Login() {
   const navigation = useNavigate();
+  const device = window.innerWidth;
   return (
     <styles.Container>
       <styles.Section1>
@@ -29,7 +31,9 @@ export function Login() {
         </styles.ButtonContainer>
       </styles.Section1>
       <styles.Line />
-      <styles.LoginSection>
+      <React.Fragment>
+      {
+        device > 600 ? <styles.LoginSection>
         <styles.LoginImage src={loginbg} alt="login" />
         <styles.Form>
           <legend>LOGIN</legend>
@@ -41,11 +45,12 @@ export function Login() {
             <label>PIN</label>
             <input type="text" placeholder="465656" />
           </div>
-          <Button text="LOGIN" width={300} background="#0A7C72" color="white"  onClick={() => {
+        </styles.Form>
+          </styles.LoginSection> : <MobileLogin />}
+        <Button text="LOGIN" width={250} background="#0A7C72" color="white"  onClick={() => {
               navigation("/student");
             }}/>
-        </styles.Form>
-      </styles.LoginSection>
+        </React.Fragment>
     </styles.Container>
   );
 }

@@ -17,6 +17,14 @@ export const Container = styled.main`
     align-self: center;
     justify-self: center;
     width: 35%;
+
+    @media (max-width: 600px){
+      width: 75%;
+      font-size: 20px;
+      margin: 30px 0;
+      display: flex;
+        justify-self: center;
+    }
   }
 `;
 
@@ -36,6 +44,10 @@ export const SectionContainerCard = styled.div`
     width: 100%;
     font-size: 15px;
   }
+ @media (max-width : 600px){
+  display: none;
+ }
+
 `;
 
 export const BigCard = styled.div`

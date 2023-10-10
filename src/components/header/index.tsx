@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AiFillPhone, AiFillMail } from "react-icons/ai";
-import {FaAlignJustify} from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 import * as Styles from "./styled";
 import brand from "../../images/brand.png";
@@ -86,17 +85,13 @@ export function Header() {
                     </Styles.BrandText>
                 </Styles.Section>
             
-             { showModal  &&  <nav className="Modal">
+             <nav className="Modal">
                     {
                     location.includes("student") ? <ApplicationLinks /> :
                     <LandingLinks />
                     
                     }
                 </nav> 
-}
-{
-                  <Styles.IconContainer className="menuContainer"><FaAlignJustify className="menu" color="#62F0E4" size={0} onClick={dropModal}/></Styles.IconContainer>
-            }
             </Styles.Brand>
         </Styles.Heading>
     )

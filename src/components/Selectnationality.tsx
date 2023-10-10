@@ -8,6 +8,9 @@ flex-directon: row;
 gap: 30px;
   font-size: 14px;
 
+@media(max-width: 600px){
+  width: 100%;
+}
 
 .student{
   color: #03453F;
@@ -27,6 +30,10 @@ export const Input = styled.div`
    cursor: pointer;
   }
 
+@media(max-width: 600px){
+  width: 100%;
+  background: voilet;
+}
 `;
 
 
